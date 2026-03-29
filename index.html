@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEAD KATZ | Epoxy Resin Art</title>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg: #0a0a0a;
+--text: #e0e0e0;
+--accent: #ff3333;
+--accent-hover: #ff6666;
+--card: #1a1a1a;
+--border: #333;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+background: var(--bg);
+color: var(--text);
+font-family: 'Inter', sans-serif;
+line-height: 1.6;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 2rem;
+}
+header {
+text-align: center;
+padding: 3rem 0;
+border-bottom: 1px solid var(--border);
+}
+.logo {
+font-family: 'Creepster', cursive;
+font-size: clamp(3rem, 12vw, 6rem);
+color: var(--accent);
+text-shadow: 0 0 20px rgba(255,51,51,0.4);
+}
+.tagline {
+color: #888;
+font-style: italic;
+margin-top: 0.5rem;
+}
+.intro {
+max-width: 700px;
+margin: 3rem auto;
+text-align: center;
+color: #aaa;
+}
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+margin: 3rem 0;
+}
+.piece {
+background: var(--card);
+border: 1px solid var(--border);
+border-radius: 8px;
+overflow: hidden;
+}
+.piece-img {
+height: 300px;
+background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+display: flex;
+align-items: center;
+justify-content: center;
+color: #555;
+font-size: 4rem;
+}
+.piece-info {
+padding: 1.5rem;
+}
+.piece-title {
+font-size: 1.2rem;
+font-weight: 600;
+margin-bottom: 0.5rem;
+}
+.piece-desc {
+color: #666;
+font-size: 0.9rem;
+margin-bottom: 1rem;
+}
+.piece-price {
+font-size: 1.3rem;
+color: var(--accent);
+font-weight: 800;
+margin-bottom: 1rem;
+}
+.btn {
+display: block;
+width: 100%;
+padding: 0.8rem;
+background: var(--accent);
+color: #000;
+text-align: center;
+text-decoration: none;
+font-weight: 800;
+text-transform: uppercase;
+border-radius: 4px;
+}
+.btn:hover {
+background: var(--accent-hover);
+}
+.shop-all {
+text-align: center;
+margin: 3rem 0;
+}
+.shop-all a {
+display: inline-block;
+padding: 1rem 3rem;
+border: 2px solid var(--accent);
+color: var(--accent);
+text-decoration: none;
+font-weight: 800;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+}
+.shop-all a:hover {
+background: var(--accent);
+color: #000;
+}
+footer {
+text-align: center;
+padding: 3rem 0;
+border-top: 1px solid var(--border);
+color: #444;
+margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1 class="logo">DEAD KATZ</h1>
+<p class="tagline">Epoxy Resin Art • Nine Lives in Every Piece</p>
+</header>
+
+<div class="intro">
+<p>Handmade resin art. Layer by layer, chaos becomes permanent. No two pieces share the same DNA.</p>
+</div>
+
+<div class="gallery">
+<div class="piece">
+<div class="piece-img">🎨</div>
+<div class="piece-info">
+<h3 class="piece-title">Piece One</h3>
+<p class="piece-desc">Black resin, silver leaf</p>
+<p class="piece-price">$400</p>
+<a href="https://deadkatz.myshopify.com" class="btn">View in Shop</a>
+</div>
+</div>
+<div class="piece">
+<div class="piece-img">🎨</div>
+<div class="piece-info">
+<h3 class="piece-title">Piece Two</h3>
+<p class="piece-desc">Crimson pigment, copper</p>
+<p class="piece-price">$350</p>
+<a href="https://deadkatz.myshopify.com" class="btn">View in Shop</a>
+</div>
+</div>
+<div class="piece">
+<div class="piece-img">🎨</div>
+<div class="piece-info">
+<h3 class="piece-title">Piece Three</h3>
+<p class="piece-desc">Clear resin, LED base</p>
+<p class="piece-price">$275</p>
+<a href="https://deadkatz.myshopify.com" class="btn">View in Shop</a>
+</div>
+</div>
+</div>
+
+<div class="shop-all">
+<a href="https://deadkatz.myshopify.com">Shop All Artwork</a>
+</div>
+
+<footer>
+<p>&copy; 2026 DEAD KATZ</p>
+</footer>
+</div>
+</body>
+</html>
