@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | DEAD KATZ</title>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg: #0a0a0a;
+--text: #e0e0e0;
+--accent: #ff3333;
+--accent-hover: #ff6666;
+--card: #1a1a1a;
+--border: #333;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+background: var(--bg);
+color: var(--text);
+font-family: 'Inter', sans-serif;
+line-height: 1.6;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 2rem;
+}
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1.5rem 0;
+border-bottom: 1px solid var(--border);
+margin-bottom: 2rem;
+}
+.nav-logo {
+font-family: 'Creepster', cursive;
+font-size: 1.8rem;
+color: var(--accent);
+text-decoration: none;
+}
+.nav-links {
+display: flex;
+gap: 2rem;
+list-style: none;
+}
+.nav-links a {
+color: #888;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 0.85rem;
+letter-spacing: 0.1em;
+transition: color 0.3s;
+}
+.nav-links a:hover, .nav-links a.active {
+color: var(--accent);
+}
+.menu-toggle {
+display: none;
+background: none;
+border: none;
+color: var(--accent);
+font-size: 1.5rem;
+cursor: pointer;
+}
+@media (max-width: 768px) {
+.menu-toggle { display: block; }
+.nav-links {
+display: none;
+position: absolute;
+top: 70px;
+left: 0;
+right: 0;
+background: var(--card);
+flex-direction: column;
+padding: 2rem;
+border-bottom: 1px solid var(--border);
+}
+.nav-links.active { display: flex; }
+}
+.page-header {
+text-align: center;
+margin-bottom: 3rem;
+}
+.page-header h1 {
+font-family: 'Creepster', cursive;
+font-size: 3rem;
+color: var(--accent);
+margin-bottom: 1rem;
+}
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+margin: 3rem 0;
+}
+.piece {
+background: var(--card);
+border: 1px solid var(--border);
+border-radius: 8px;
+overflow: hidden;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.piece:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 30px rgba(255,51,51,0.2);
+}
+.piece-img {
+height: 350px;
+background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+display: flex;
+align-items: center;
+justify-content: center;
+color: #555;
+font-size: 4rem;
+}
+.piece-img img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.piece-info {
+padding: 1.5rem;
+}
+.piece-title {
+font-size: 1.3rem;
+font-weight: 600;
+margin-bottom: 0.5rem;
+}
+.piece-desc {
+color: #666;
+font-size: 0.9rem;
+margin-bottom: 0.5rem;
+}
+.piece-dims {
+color: #444;
+font-size: 0.8rem;
+margin-bottom: 1rem;
+}
+.piece-price {
+font-size: 1.4rem;
+color: var(--accent);
+font-weight: 800;
+margin-bottom: 1rem;
+}
+.status {
+display: inline-block;
+padding: 0.3rem 0.8rem;
+border-radius: 4px;
+font-size: 0.75rem;
+font-weight: 600;
+text-transform: uppercase;
+margin-bottom: 1rem;
+}
+.available {
+background: rgba(255,51,51,0.2);
+color: var(--accent);
+border: 1px solid var(--accent);
+}
+.sold {
+background: #222;
+color: #555;
+border: 1px solid #333;
+}
+.btn {
+display: block;
+width: 100%;
+padding: 0.8rem;
+background: var(--accent);
+color: #000;
+text-align: center;
+text-decoration: none;
+font-weight: 800;
+text-transform: uppercase;
+border-radius: 4px;
+}
+.btn:hover {
+background: var(--accent-hover);
+}
+.btn.sold-out {
+background: #222;
+color: #555;
+cursor: not-allowed;
+}
+footer {
+text-align: center;
+padding: 3rem 0;
+border-top: 1px solid var(--border);
+color: #444;
+margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<nav>
+<a href="index.html" class="nav-logo">DEAD KATZ</a>
+<button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="gallery.html" class="active">Gallery</a></li>
+<li><a href="https://deadkatz.myshopify.com">Shop</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<div class="page-header">
+<h1>All Works</h1>
+<p style="color: #666;">Available pieces updated weekly</p>
+</div>
+
+<div class="gallery">
+<div class="piece">
+<div class="piece-img">🎨</div>
+<div class="piece-info">
+<h3 class="piece-title">Midnight Resurrection</h3>
+<p class="piece-desc">Black resin, silver leaf, crushed mirror</p>
+<p class="piece-dims">24" × 36" × 2"</p>
+<p class="piece-price">$450</p>
+<span class="status available">Available</span>
+<a href="https://deadkatz.myshopify.com/products/midnight-resurrection" class="btn">View in Shop</a>
+</div>
+</div>
+
+<div class="piece">
+<div class="piece-img">🎨</div>
+<div class="piece-info">
+<h3 class="piece-title">Blood Moon</h3>
+<p class="piece-desc">Crimson pigment, copper wire, volcanic ash</p>
+<p class="piece-dims">18" × 24" × 1.5"</p>
+<p class="piece-price">$325</p>
+<span class="status available">Available</span>
+<a href="https://deadkatz.myshopify.com/products/blood-moon" class="btn">View in Shop</a>
+</div>
+</div>
+
+<div class="piece">
+<div class="piece-img">🎨</div>
+<div class="piece-info">
+<h3 class="piece-title">Ghost in the Machine</h3>
+<p class="piece-desc">Clear resin, circuit boards, LED base</p>
+<p class="piece-dims">12" × 12" × 3"</p>
+<p class="piece-price">$275</p>
+<span class="status sold">Sold</span>
+<a href="#" class="btn sold-out">Sold Out</a>
+</div>
+</div>
+
+<div class="piece">
+<div class="piece-img">🎨</div>
+<div class="piece-info">
+<h3 class="piece-title">Nine Lives</h3>
+<p class="piece-desc">Layered resin, gold flake, walnut base</p>
+<p class="piece-dims">16" × 20" × 2.5"</p>
+<p class="piece-price">$525</p>
+<span class="status available">Available</span>
+<a href="https://deadkatz.myshopify.com/products/nine-lives" class="btn">View in Shop</a>
+</div>
+</div>
+</div>
+
+<footer>
+<p>&copy; 2026 DEAD KATZ • Curiosity is not a crime</p>
+</footer>
+</div>
+</body>
+</html>
