@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | DEAD KATZ</title>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg: #0a0a0a;
+--text: #e0e0e0;
+--accent: #ff3333;
+--accent-hover: #ff6666;
+--card: #1a1a1a;
+--border: #333;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+background: var(--bg);
+color: var(--text);
+font-family: 'Inter', sans-serif;
+line-height: 1.6;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 2rem;
+}
+
+/* Navigation */
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1.5rem 0;
+border-bottom: 1px solid var(--border);
+margin-bottom: 3rem;
+}
+.nav-logo {
+font-family: 'Creepster', cursive;
+font-size: 1.5rem;
+color: var(--accent);
+text-decoration: none;
+}
+.nav-links {
+display: flex;
+gap: 2rem;
+list-style: none;
+}
+.nav-links a {
+color: #888;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 0.85rem;
+letter-spacing: 0.1em;
+transition: color 0.3s;
+}
+.nav-links a:hover, .nav-links a.active {
+color: var(--accent);
+}
+
+/* Content */
+.page-header {
+text-align: center;
+margin-bottom: 3rem;
+}
+.page-header h1 {
+font-family: 'Creepster', cursive;
+font-size: 3rem;
+color: var(--accent);
+margin-bottom: 1rem;
+}
+.content-section {
+max-width: 800px;
+margin: 0 auto 3rem;
+padding: 2rem;
+background: var(--card);
+border: 1px solid var(--border);
+border-radius: 8px;
+}
+.content-section h2 {
+color: var(--accent);
+font-family: 'Creepster', cursive;
+margin-bottom: 1rem;
+}
+.content-section p {
+color: #aaa;
+line-height: 1.8;
+margin-bottom: 1.5rem;
+}
+
+/* Mobile menu */
+@media (max-width: 600px) {
+.nav-links { gap: 1rem; }
+.nav-links a { font-size: 0.75rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<nav>
+<a href="index.html" class="nav-logo">DEAD KATZ</a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html" class="active">About</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="https://deadkatz.myshopify.com">Shop</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<div class="page-header">
+<h1>The Process</h1>
+<p style="color: #666;">How chaos becomes permanent</p>
+</div>
+
+<div class="content-section">
+<h2>From Destruction to Resin</h2>
+<p>Each Dead Katz piece begins with broken things—shattered glass, burnt wood, crushed metal, dried flowers. Materials that have reached their end.</p>
+<p>Layer by layer, epoxy resin suspends these fragments in eternal amber. What dies is reborn solid, glossy, immortal. No two pieces share the same DNA.</p>
+<p>This is art for the afterlife. Nine lives in every pour.</p>
+</div>
+
+<div class="content-section">
+<h2>The Artist</h2>
+<p>[Your story here. Where you're based, how you started working with resin, what inspires your pieces.]</p>
+</div>
+</div>
+</body>
+</html>
