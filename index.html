@@ -1,194 +1,411 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DEAD KATZ | Epoxy Resin Art</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DEAD KATZ | Tools, Experiments & Future Resin Drops</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 <style>
 :root {
---bg: #0a0a0a;
---text: #e0e0e0;
---accent: #ff3333;
---accent-hover: #ff6666;
---card: #1a1a1a;
---border: #333;
+  --bg: #0a0a0a;
+  --text: #e0e0e0;
+  --muted: #888;
+  --soft: #aaa;
+  --accent: #ff3333;
+  --accent-hover: #ff6666;
+  --card: #1a1a1a;
+  --border: #333;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-background: var(--bg);
-color: var(--text);
-font-family: 'Inter', sans-serif;
-line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
 }
+
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
-header {
-text-align: center;
-padding: 3rem 0;
-border-bottom: 1px solid var(--border);
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
 }
+
+.nav-logo {
+  font-family: 'Creepster', cursive;
+  font-size: 1.6rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
 .logo {
-font-family: 'Creepster', cursive;
-font-size: clamp(3rem, 12vw, 6rem);
-color: var(--accent);
-text-shadow: 0 0 20px rgba(255,51,51,0.4);
+  font-family: 'Creepster', cursive;
+  font-size: clamp(3.5rem, 13vw, 7rem);
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(255,51,51,0.4);
 }
+
 .tagline {
-color: #888;
-font-style: italic;
-margin-top: 0.5rem;
+  color: var(--soft);
+  font-style: italic;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
 }
-.intro {
-max-width: 700px;
-margin: 3rem auto;
-text-align: center;
-color: #aaa;
+
+.subtagline {
+  max-width: 720px;
+  margin: 1.5rem auto 0;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
-.gallery {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 2rem;
-margin: 3rem 0;
+
+.cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
-.piece {
-background: var(--card);
-border: 1px solid var(--border);
-border-radius: 8px;
-overflow: hidden;
-}
-.piece-img {
-height: 300px;
-background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
-display: flex;
-align-items: center;
-justify-content: center;
-color: #555;
-font-size: 4rem;
-}
-.piece-info {
-padding: 1.5rem;
-}
-.piece-title {
-font-size: 1.2rem;
-font-weight: 600;
-margin-bottom: 0.5rem;
-}
-.piece-desc {
-color: #666;
-font-size: 0.9rem;
-margin-bottom: 1rem;
-}
-.piece-price {
-font-size: 1.3rem;
-color: var(--accent);
-font-weight: 800;
-margin-bottom: 1rem;
-}
+
 .btn {
-display: block;
-width: 100%;
-padding: 0.8rem;
-background: var(--accent);
-color: #000;
-text-align: center;
-text-decoration: none;
-font-weight: 800;
-text-transform: uppercase;
-border-radius: 4px;
+  display: inline-block;
+  padding: 0.9rem 1.4rem;
+  background: var(--accent);
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
 }
+
 .btn:hover {
-background: var(--accent-hover);
+  background: var(--accent-hover);
 }
-.shop-all {
-text-align: center;
-margin: 3rem 0;
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
 }
-.shop-all a {
-display: inline-block;
-padding: 1rem 3rem;
-border: 2px solid var(--accent);
-color: var(--accent);
-text-decoration: none;
-font-weight: 800;
-text-transform: uppercase;
-letter-spacing: 0.1em;
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #000;
 }
-.shop-all a:hover {
-background: var(--accent);
-color: #000;
+
+.section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border);
 }
+
+.section h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.section-intro {
+  color: var(--soft);
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.card a {
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.callout {
+  background: linear-gradient(135deg, #1a1a1a, #111);
+  border: 1px solid var(--accent);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.callout h2 {
+  color: var(--accent);
+}
+
+.disclosure {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
 footer {
-text-align: center;
-padding: 3rem 0;
-border-top: 1px solid var(--border);
-color: #444;
-margin-top: 3rem;
+  text-align: center;
+  padding: 3rem 0;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .container {
+    padding: 1.25rem;
+  }
 }
 </style>
 </head>
+
 <body>
 <div class="container">
-<header>
-<nav style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--border); margin-bottom: 2rem;">
-<a href="index.html" style="font-family: 'Creepster', cursive; font-size: 1.5rem; color: var(--accent); text-decoration: none;">DEAD KATZ</a>
-<div style="display: flex; gap: 2rem;">
-<a href="index.html" style="color: var(--accent); text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.1em;">Home</a>
-<a href="about.html" style="color: #888; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.1em;">About</a>
-<a href="gallery.html" style="color: #888; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.1em;">Gallery</a>
-<a href="https://deadkatz.myshopify.com" style="color: #888; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.1em;">Shop</a>
-<a href="contact.html" style="color: #888; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.1em;">Contact</a>
-</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">DEAD KATZ</a>
+  <div class="nav-links">
+    <a href="#start">Start Here</a>
+    <a href="#tools">Tools</a>
+    <a href="#build">Build</a>
+    <a href="#resources">Resources</a>
+    <a href="#drops">Future Drops</a>
+  </div>
 </nav>
 
-<header style="text-align: center; padding: 3rem 0; border-bottom: 1px solid var(--border);">
-<h1 class="logo" style="margin-bottom: 0.5rem;">DEAD KATZ</h1>
-<p class="tagline">Epoxy Resin Art • Nine Lives in Every Piece</p>
-</header>
+<section class="hero" id="start">
+  <h1 class="logo">DEAD KATZ</h1>
+  <p class="tagline">Curiosity killed the kat. Satisfaction brought it back.</p>
+  <p class="subtagline">
+    Tools. Experiments. Side hustles. Real builds. No guru fluff.
+    Deadkatz is where resin art, creator gear, affiliate tests, and future original drops come together.
+  </p>
 
-<div class="intro">
-<p>Handmade resin art. Layer by layer, chaos becomes permanent. No two pieces share the same DNA.</p>
-</div>
+  <div class="cta-row">
+    <a href="#tools" class="btn">Explore Tools</a>
+    <a href="#build" class="btn btn-outline">See the Build</a>
+  </div>
+</section>
 
-<div class="gallery">
-<div class="piece">
-<div class="piece-img">🎨</div>
-<div class="piece-info">
-<h3 class="piece-title">Piece One</h3>
-<p class="piece-desc">Black resin, silver leaf</p>
-<p class="piece-price">$400</p>
-<a href="https://deadkatz.myshopify.com" class="btn">View in Shop</a>
-</div>
-</div>
-<div class="piece">
-<div class="piece-img">🎨</div>
-<div class="piece-info">
-<h3 class="piece-title">Piece Two</h3>
-<p class="piece-desc">Crimson pigment, copper</p>
-<p class="piece-price">$350</p>
-<a href="https://deadkatz.myshopify.com" class="btn">View in Shop</a>
-</div>
-</div>
-<div class="piece">
-<div class="piece-img">🎨</div>
-<div class="piece-info">
-<h3 class="piece-title">Piece Three</h3>
-<p class="piece-desc">Clear resin, LED base</p>
-<p class="piece-price">$275</p>
-<a href="https://deadkatz.myshopify.com" class="btn">View in Shop</a>
-</div>
-</div>
-</div>
+<section class="section">
+  <h2>What Deadkatz Is Becoming</h2>
+  <p class="section-intro">
+    This is not just a store. Not yet. Deadkatz is being built in public: the tools, the mistakes, the experiments,
+    the setups, the resin work, and the systems behind turning a creative brand into something real.
+  </p>
 
-<div class="shop-all">
-<a href="https://deadkatz.myshopify.com">Shop All Artwork</a>
-</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon">🧪</div>
+      <h3>Resin Experiments</h3>
+      <p>Behind-the-scenes tests, materials, mistakes, and future handmade resin pieces.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🛠️</div>
+      <h3>Creator Tools</h3>
+      <p>Gear, supplies, lighting, packaging, and software used to build Deadkatz from the ground up.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">💀</div>
+      <h3>No Guru Fluff</h3>
+      <p>Affiliate marketing and online business experiments without the fake millionaire nonsense.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tools">
+  <h2>Tools I’m Testing</h2>
+  <p class="section-intro">
+    These are the categories I’m building around first. Product links will point to Amazon, Digistore24, or other
+    affiliate partners when appropriate.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon">🎨</div>
+      <h3>Resin Starter Gear</h3>
+      <p>Epoxy resin, pigments, molds, gloves, cups, mixing sticks, and safety basics.</p>
+      <a href="#">Coming Soon</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📸</div>
+      <h3>Phone Content Setup</h3>
+      <p>Tripods, lights, backdrops, microphones, and simple creator gear for filming with a phone.</p>
+      <a href="#">Coming Soon</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📦</div>
+      <h3>Packaging & Shipping</h3>
+      <p>Boxes, labels, bubble wrap, mailers, inserts, and presentation upgrades.</p>
+      <a href="#">Coming Soon</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🧠</div>
+      <h3>Digital Creator Resources</h3>
+      <p>Courses, tools, templates, and systems for building an online brand.</p>
+      <a href="#">Coming Soon</a>
+    </div>
+  </div>
+
+  <p class="disclosure">
+    Disclosure: Some links on this site may be affiliate links. If you buy through them, Deadkatz may earn a commission
+    at no extra cost to you.
+  </p>
+</section>
+
+<section class="section" id="build">
+  <h2>The Build Journal</h2>
+  <p class="section-intro">
+    Follow the process of building Deadkatz from a domain and a rough idea into a real brand.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Week 1 — The Pivot</h3>
+      <p>Turning Deadkatz from an empty art storefront into a creator brand and affiliate launchpad.</p>
+      <a href="#">Read Soon</a>
+    </div>
+
+    <div class="card">
+      <h3>Week 2 — First Tool Pages</h3>
+      <p>Building the first Amazon affiliate categories around resin supplies and content gear.</p>
+      <a href="#">Read Soon</a>
+    </div>
+
+    <div class="card">
+      <h3>Week 3 — First Resin Drop Prep</h3>
+      <p>Getting photos, pricing, packaging, and Shopify ready for actual handmade pieces.</p>
+      <a href="#">Read Soon</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="resources">
+  <div class="callout">
+    <h2>Get the Deadkatz Creator Checklist</h2>
+    <p>
+      A simple starter list for building a creative brand with a phone, laptop, affiliate links, and no fancy setup.
+    </p>
+    <div class="cta-row">
+      <a href="mailto:deadkatz@example.com?subject=Deadkatz Creator Checklist" class="btn">Join the List</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="drops">
+  <h2>Future Resin Drops</h2>
+  <p class="section-intro">
+    Original Deadkatz resin pieces are still coming. For now, the focus is building the audience, documenting the process,
+    and preparing the first real drop properly.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon">🔥</div>
+      <h3>Limited Pieces</h3>
+      <p>Small-batch handmade resin work. No fake mass production. No two pieces identical.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🖤</div>
+      <h3>Dark Visual Style</h3>
+      <p>Black, crimson, metallics, layered chaos, and strange little artifacts with attitude.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🛒</div>
+      <h3>Shopify Later</h3>
+      <p>The store exists, but it should not be the main attraction until the inventory is ready.</p>
+      <a href="https://deadkatz.myshopify.com">Visit Future Shop</a>
+    </div>
+  </div>
+</section>
 
 <footer>
-<p>&copy; 2026 DEAD KATZ</p>
+  <p>&copy; 2026 DEAD KATZ</p>
+  <p class="disclosure">
+    Deadkatz may participate in affiliate programs including Amazon Associates and Digistore24.
+  </p>
 </footer>
+
 </div>
 </body>
 </html>
